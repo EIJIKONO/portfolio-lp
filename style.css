@@ -10,16 +10,16 @@
 }
 
 :root {
-  --clr-bg:        #0d0d0f;
-  --clr-bg2:       #141418;
-  --clr-bg3:       #1c1c23;
-  --clr-surface:   #21212b;
+  --clr-bg:        #080c12;
+  --clr-bg2:       #0d1420;
+  --clr-bg3:       #111d2e;
+  --clr-surface:   #162236;
   --clr-border:    rgba(255,255,255,0.08);
-  --clr-accent:    #7c6ff7;
-  --clr-accent2:   #a78bfa;
-  --clr-cyan:      #22d3ee;
-  --clr-text:      #f1f0ff;
-  --clr-muted:     #8b8ba8;
+  --clr-accent:    #0ea5e9;
+  --clr-accent2:   #38bdf8;
+  --clr-cyan:      #f59e0b;
+  --clr-text:      #e8f4fd;
+  --clr-muted:     #7a96b0;
   --clr-white:     #ffffff;
 
   --font-sans: "Inter", "Noto Sans JP", system-ui, -apple-system, sans-serif;
@@ -237,12 +237,14 @@ img {
   width: 600px; height: 600px;
   background: var(--clr-accent);
   top: -200px; right: -100px;
+  opacity: 0.18;
 }
 
 .hero-glow-2 {
   width: 400px; height: 400px;
   background: var(--clr-cyan);
   bottom: -100px; left: -100px;
+  opacity: 0.12;
 }
 
 .hero-inner {
