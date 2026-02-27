@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ポートフォリオ - Webデベロッパー / UIデザイナー">
+  <title>Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ページローダー -->
+<div class="page-loader" id="page-loader">
+  <div class="loader-spinner"></div>
+</div>
+
+<!-- ===========================
+     ナビゲーション
+     =========================== -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-name">Portfolio</span>
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===========================
+     ヒーローセクション
+     =========================== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+  </div>
+
+  <div class="container hero-inner">
+    <!-- テキスト -->
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <div class="hero-dot"></div>
+        <span class="hero-eyebrow-text">Available for work</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span id="hero-name">山田 太郎</span><br>
+        <span class="gradient-text" id="hero-title-role">Webデベロッパー</span>
+      </h1>
+
+      <p class="hero-subtitle" id="hero-tagline">
+        使いやすく、美しいプロダクトを創る
+      </p>
+
+      <div class="hero-actions">
+        <a href="#works" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+          実績を見る
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          お問い合わせ
+        </a>
+      </div>
+
+      <div class="hero-social" id="hero-social">
+        <!-- data.jsのsocialLinksから自動生成 -->
+      </div>
+    </div>
+
+    <!-- アバター画像 -->
+    <div class="hero-image-wrap">
+      <img
+        id="hero-avatar-img"
+        class="hero-avatar"
+        src=""
+        alt="プロフィール写真"
+        style="display:none"
+      >
+      <div id="hero-avatar-placeholder" class="hero-avatar-placeholder">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+        </svg>
+        <span>images/avatar.jpg<br>を配置してください</span>
+      </div>
+
+      <div class="hero-badge">
+        <div class="hero-badge-icon">✨</div>
+        <div>
+          <div class="hero-badge-text">フリーランス</div>
+          <div class="hero-badge-sub">受付中</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- スクロールインジケーター -->
+  <div class="scroll-indicator">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+    Scroll
+  </div>
+</section>
+
+<!-- ===========================
+     統計数字
+     =========================== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid" id="stats-grid">
+      <!-- data.jsから自動生成 -->
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     自己紹介セクション
+     =========================== -->
+<section class="section" id="about">
+  <div class="container about-inner">
+    <!-- テキスト -->
+    <div class="about-text-block">
+      <span class="section-label reveal">About</span>
+      <h2 class="section-title reveal">こんにちは、<br>私についてご紹介します</h2>
+      <p class="about-bio reveal" id="about-bio">
+        <!-- data.jsから自動設定 -->
+      </p>
+
+      <div class="about-details reveal">
+        <div class="about-detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span id="about-location">東京, 日本</span>
+        </div>
+        <div class="about-detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/>
+          </svg>
+          <a id="about-email" href="#">メールはこちら</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- カード -->
+    <div class="about-visual">
+      <div class="about-card reveal">
+        <div class="about-card-header">
+          <div class="about-card-icon">🎯</div>
+          <div class="about-card-title">私のアプローチ</div>
+        </div>
+        <div class="about-card-body">
+          ユーザーファーストの考え方を軸に、デザインと開発の橋渡しをします。シンプルで直感的なプロダクトを追求しています。
+        </div>
+      </div>
+
+      <div class="about-card reveal reveal-delay-1">
+        <div class="about-card-header">
+          <div class="about-card-icon">⚡</div>
+          <div class="about-card-title">得意なこと</div>
+        </div>
+        <div class="about-card-body">
+          フロントエンド開発・UI/UXデザイン・Webパフォーマンス最適化・レスポンシブデザインを強みとしています。
+        </div>
+      </div>
+
+      <div class="about-card reveal reveal-delay-2">
+        <div class="about-card-header">
+          <div class="about-card-icon">🌱</div>
+          <div class="about-card-title">現在学んでいること</div>
+        </div>
+        <div class="about-card-body">
+          WebGL・Three.js・インタラクティブアニメーション・AIを活用した開発フローの効率化に取り組んでいます。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     実績一覧セクション
+     =========================== -->
+<section class="section" id="works" style="background:var(--clr-bg2)">
+  <div class="container">
+    <div style="margin-bottom:40px">
+      <span class="section-label reveal">Works</span>
+      <h2 class="section-title reveal">制作実績</h2>
+      <p class="section-desc reveal">これまでに手がけたプロジェクトの一部をご紹介します。</p>
+    </div>
+
+    <!-- カテゴリフィルター -->
+    <div class="works-filter reveal" id="works-filter">
+      <!-- data.jsから自動生成 -->
+    </div>
+
+    <!-- カードグリッド -->
+    <div class="works-grid" id="works-grid">
+      <!-- data.jsから自動生成 -->
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     スキルセクション
+     =========================== -->
+<section class="section" id="skills">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start">
+      <div>
+        <span class="section-label reveal">Skills</span>
+        <h2 class="section-title reveal">スキルセット</h2>
+        <p class="section-desc reveal">
+          フロントエンド開発からデザインまで、幅広いスキルで対応します。
+        </p>
+      </div>
+      <div class="skills-grid" id="skills-grid">
+        <!-- data.jsから自動生成 -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     お問い合わせセクション
+     =========================== -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div style="margin-bottom:48px">
+      <span class="section-label reveal">Contact</span>
+      <h2 class="section-title reveal">お問い合わせ</h2>
+      <p class="section-desc reveal">お仕事のご依頼・ご相談はお気軽にどうぞ。</p>
+    </div>
+
+    <div class="contact-inner">
+      <!-- 左：連絡先情報 -->
+      <div class="contact-info reveal">
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">メールアドレス</div>
+            <div class="contact-detail-value" id="contact-email">hello@example.com</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">所在地</div>
+            <div class="contact-detail-value" id="contact-location">東京, 日本</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-detail-label">対応時間</div>
+            <div class="contact-detail-value">平日 10:00 〜 19:00</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右：フォーム -->
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="form-name">お名前 <span>*</span></label>
+              <input class="form-input" type="text" id="form-name" name="name" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-email">メールアドレス <span>*</span></label>
+              <input class="form-input" type="email" id="form-email" name="email" placeholder="hello@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-subject">件名</label>
+            <input class="form-input" type="text" id="form-subject" name="subject" placeholder="お仕事のご依頼">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-message">メッセージ <span>*</span></label>
+            <textarea class="form-textarea" id="form-message" name="message" placeholder="ご依頼内容やご質問をご記入ください..." required></textarea>
+          </div>
+
+          <div id="form-status" class="form-status"></div>
+
+          <button type="submit" class="btn btn-primary form-submit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            送信する
+          </button>
+
+          <p class="form-note">
+            ※ 通常2営業日以内にご返信いたします。
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     フッター
+     =========================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <span class="nav-logo-name">Portfolio</span>
+    </div>
+
+    <p class="footer-copy">
+      &copy; <span id="footer-year"></span> <span id="footer-copy-name"></span>. All rights reserved.
+    </p>
+
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- ===========================
+     モーダル
+     =========================== -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+  <div class="modal">
+    <div class="modal-header">
+      <img id="modal-img" src="" alt="" style="width:100%;height:100%;object-fit:cover">
+      <button class="modal-close" id="modal-close" aria-label="閉じる">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-category" id="modal-category"></div>
+      <h3 class="modal-title" id="modal-title"></h3>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-tags" id="modal-tags"></div>
+      <div class="modal-video" id="modal-video" style="display:none"></div>
+      <a href="#" class="modal-link" id="modal-link" target="_blank" rel="noopener" style="display:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        サイトを見る
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" aria-label="ページトップへ">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<!-- フッター年 -->
+<script>
+  document.getElementById("footer-year").textContent = new Date().getFullYear();
+</script>
+
+<!-- スキルレイアウト: スマホ対応 -->
+<script>
+  function adjustSkillsLayout() {
+    const wrap = document.querySelector("#skills .container > div");
+    if (!wrap) return;
+    if (window.innerWidth <= 768) {
+      wrap.style.gridTemplateColumns = "1fr";
+      wrap.style.gap = "32px";
+    } else {
+      wrap.style.gridTemplateColumns = "1fr 2fr";
+      wrap.style.gap = "80px";
+    }
+  }
+  adjustSkillsLayout();
+  window.addEventListener("resize", adjustSkillsLayout);
+</script>
+
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
